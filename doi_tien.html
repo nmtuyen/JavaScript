@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>Exchange rate</th>
+            <th>From curnecy</th>
+            <th>To curency</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="nhap"/></td>
+            <td><input type="number" id="rate"/></td>
+            <td>
+                <select id="se1">
+                    <option value="VietNam" id="vn1">VietNam</option>
+                    <option value="USD" id="usd1">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="se2">
+                    <option value="VietNam" id="vn2">VietNam</option>
+                    <option value="USD" id="usd2">USD</option>
+                </select>
+            </td>
+            <th><p><button onclick="doi_tien()" id="change">Convert</button></p></th>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td> Result </td>
+            <td id="ket_qua"></td>
+        </tr>
+    </table>
+
+    <script>
+
+        function doi_tien() {
+            let before = document.getElementById("se1").value;
+            let after = document.getElementById("se2").value;
+            let input = document.getElementById("nhap").value;
+            if(before == after)
+                document.getElementById("ket_qua").innerHTML = input;
+            else
+               if(before=="VietNam" && after=="USD")
+                   document.getElementById("ket_qua").innerHTML = input/23000;
+               else
+                   document.getElementById("ket_qua").innerHTML = input*23000;
+        }
+    </script>
+
+</body>
+</html>
