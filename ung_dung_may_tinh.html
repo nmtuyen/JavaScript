@@ -5,31 +5,36 @@
     <title>Title</title>
 </head>
 <body>
+<form>
+    <input type="number" id="so_thu_1"/>
+    <input type="number" id="so_thu_2"/><br>
+    <button onclick='tong()' id="1">Cong</button>
+    <button onclick='hieu()' id="2">Tru</button>
+    <button onclick='tich()' id="3">Nhan</button>
+    <button onclick='thuong()' id="4">Chia</button>
+</form>
 <table>
     <tr>
-        <td colspan="2"><input type="text" id="so_thu_nhat"/></td>
-        <td colspan="2"><input type="text" id="so_thu_hai"/></td>
-    </tr>
-    <tr>
-        <td><button onclick="tong_hai_so()" id="tong">Addition(+)</button></td>
-        <td><button onclick="hieu_hai_so" id="hieu">Subtration(-)</button></td>
-        <td><button onclick="tich_hai_so" id="tich">Mutiplication(x)</button></td>
-        <td><button onclick="thuong_hai_so" id="thuong">Division(/)</button></td>
-    </tr>
-    <tr>
-        <td>Kết quả là: </td>
-        <td id="kq"></td>
+        <td>Kết quả</td>
+        <td id="ket_qua"></td>
     </tr>
 </table>
 <script>
-    function tong_hai_so() {
-        a = document.getElementById("so_thu_nhat").value;
-        b = document.getElementById("so_thu_hai").value;
-        document.getElementById("kq").innerHTML = a + b;
+    a = document.getElementById("so_thu_1").value;
+    b = document.getElementById("so_thu_2").value;
+    function tong() {
+        document.getElementById("ket_qua").innerHTML = a+b;
     }
-
-
+    function hieu() {
+        document.getElementById("ket_qua").innerHTML = a-b;
+    }
+    function tich() {
+        document.getElementById("ket_qua").innerHTML = a*b;
+    }
+    function thuong() {
+        document.getElementById("ket_qua").innerHTML = a/b;
+    }
 </script>
-b 
+
 </body>
 </html>
