@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    Nhap_can_nang(kg) <tr><input type="number" id="chieu_cao"/></tr>
+    Nhap_chieu_cao(m) <tr><input type="number" id="can_nang"/></tr>
+    <button id="kq" onclick='tinh_BMI()'>Ket_qua</button>
+</table>
+<script>
+    function tinh_BMI() {
+        let a = document.getElementById("chieu_cao").value;
+        let b = document.getElementById("can_nang").value;
+        let BMI = b / (a * a);
+
+        if (BMI < 18.5) {
+            alert("underweight")
+        } else if (BMI < 25) {
+            alert("normal")
+        } else if (BMI < 30) {
+            alert("over weight")
+        } else
+            alert("Obese")
+    }
+</script>
+
+</body>
+</html>

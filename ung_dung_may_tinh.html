@@ -5,14 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<form>
-    <input type="number" id="so_thu_1"/>
-    <input type="number" id="so_thu_2"/><br>
-    <button onclick='tong()' id="1">Cong</button>
-    <button onclick='hieu()' id="2">Tru</button>
-    <button onclick='tich()' id="3">Nhan</button>
-    <button onclick='thuong()' id="4">Chia</button>
-</form>
+<table>
+    <tr><input type="number" id="so_thu_1"/></tr>
+    <tr><input type="number" id="so_thu_2"/></tr><br>
+    <tr><button onclick='tong()' id="1">Cong</button></tr>
+    <tr><button onclick='hieu()' id="2">Tru</button></tr>
+    <tr><button onclick='tich()' id="3">Nhan</button></tr>
+    <tr><button onclick='thuong()' id="4">Chia</button></tr>
+</table>
 <table>
     <tr>
         <td>Kết quả</td>
@@ -21,8 +21,8 @@
 </table>
 <script>
     function tong() {
-        a = document.getElementById("so_thu_1").value;
-        b = document.getElementById("so_thu_2").value;
+        a = parseInt(getElementById("so_thu_1").value);
+        b = parseInt(getElementById("so_thu_2").value);
         document.getElementById("ket_qua").innerHTML = a+b;
     }
     function hieu() {
