@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<form>
+    <img id="nobita"
+         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvMTZjk-wgoL7AY-ljExelLBIyxSWffyvPig&usqp=CAU">
+</form>
+<script>
+    // function init() {
+    //     hinh_anh = document.getElementById("nobita");
+    //     hinh_anh.style.position = 'relative'
+    //     hinh_anh.style.left = '1000'
+    //     hinh_anh.style.bottom = '500'
+    // }
+
+    let hinh_anh = document.getElementById("nobita");
+    hinh_anh.style.position = 'relative'
+    hinh_anh.style.left = '100px'
+    hinh_anh.style.top = '50px'
+
+    function move_right() {
+        hinh_anh.style.left = parseInt(hinh_anh.style.left) + 50 + 'px';
+    }
+
+    function move_left() {
+        hinh_anh.style.left = parseInt(hinh_anh.style.left) - 50 + "px";
+    }
+
+    function move_up() {
+        hinh_anh.style.top = parseInt(hinh_anh.style.top) - 50 + "px";
+    }
+
+    function move_down() {
+        hinh_anh.style.top = parseInt(hinh_anh.style.top) + 50 + "px";
+    }
+
+    function move_position(event) {
+        switch (event.keyCode) {
+            case 39:
+                move_right();
+                break;
+            case 37:
+                move_left();
+                break;
+            case 40:
+                move_down();
+                break;
+            case 38:
+                move_up();
+                break;
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keydown', move_position)
+    }
+
+
+</script>
+
+</body>
+</html>
