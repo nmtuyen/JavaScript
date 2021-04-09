@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td><input type="number" id="thang"/></td>
+        <td><button id="tinh" onclick="tinh_so_ngay_trong_thang()">Kết quả</button></td>
+    </tr>
+    <tr>
+        <td>Result</td>
+        <td id="ket_qua"></td>
+    </tr>
+
+</table>
+<script>
+    function tinh_so_ngay_trong_thang() {
+        let a = document.getElementById("thang").value;
+        switch (a){
+             case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '9':
+            case '11':
+                document.getElementById("ket_qua").innerText = "tháng "+ a + "có 31 ngày";
+            break;
+            case '2':
+                document.getElementById("ket_qua").innerText = "tháng "+ a + "có 28 ngày";
+            break;
+            case '4':
+            case '6':
+            case '8':
+            case '10':
+            case '12':
+                document.getElementById("ket_qua").innerHTML = "tháng "+ a + " có 30 ngày";
+            break;
+        }
+
+    }
+</script>
+
+</body>
+</html>
